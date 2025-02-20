@@ -1,0 +1,18 @@
+modules:
+  confluence:contentAction:
+    - key: export-to-word-for-confluence-hello-world-content-action
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: Export to Word for Confluence
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/e2e505e2-4d37-4536-bf4c-3c441ec4e34e
